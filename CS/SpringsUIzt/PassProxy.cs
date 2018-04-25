@@ -4,7 +4,7 @@ using Autodesk.DesignScript.Runtime;
 namespace SpringsUIzt
 {
     [IsVisibleInDynamoLibrary(false)]
-    public struct passwordPrimitive
+    public class passwordPrimitive
     {
         private string _pass;
         

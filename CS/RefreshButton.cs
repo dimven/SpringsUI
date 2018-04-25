@@ -98,7 +98,10 @@ namespace SpringsUI
 							node.MarkNodeAsModified(true);
 						}
 					}
-					link.HomeSpace.Run();
+					if (link.HomeSpace.RunSettings.RunType != Dynamo.Models.RunType.Automatic)
+					{
+					    link.HomeSpace.Run();
+					}
 				}
 			}
 		}

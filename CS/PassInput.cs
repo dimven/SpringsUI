@@ -10,6 +10,7 @@ using Dynamo.Controls;
 using Dynamo.Wpf;
 using System.Windows.Controls;
 using Dynamo.Graph;
+using System.Reflection;
 
 using Dynamo.ViewModels;
 using System.Windows;
@@ -30,7 +31,7 @@ serialized for future use.")]
     [NodeName("SpringsUI.Input.Password")]
     [OutPortDescriptions("a password input instance")]
     [OutPortNames(new []{"password"})]
-    [OutPortTypes(new []{"Object"})]
+    [OutPortTypes(new []{"object"})]
     [IsDesignScriptCompatible]
     public class PassInput : NodeModel
     {
@@ -169,7 +170,6 @@ serialized for future use.")]
                     Source = _nodeModel,
                     UpdateSourceTrigger = UpdateSourceTrigger.LostFocus
                 });
-
             editWindow.ShowDialog();
         }
         

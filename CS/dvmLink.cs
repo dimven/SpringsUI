@@ -8,8 +8,7 @@ namespace SpringsUI
 	[SupressImportIntoVM]
 	internal class dvmLink
 	{
-		private static dvmLink instance;
-		private static bool isSet = false;
+		private static dvmLink instance = null;
 		private DynamoViewModel _viewmodel { get; set; }
 
 		private dvmLink(DynamoViewModel dvm)
@@ -19,18 +18,12 @@ namespace SpringsUI
 		
 		internal static DynamoViewModel Instance(DynamoViewModel dvm=null)
 		{
-			if (isSet)
-			{
-				return instance._viewmodel;
-			}
-			
 			if (dvm != null)
 			{
 				instance = new dvmLink(dvm);
-				isSet = true;
 				return instance._viewmodel;
 			}
-			return null;
+			return instance._viewmodel;
 		}
 	}
 }
